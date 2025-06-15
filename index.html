@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aula Azul - Escuela Primaria Alfredo Del Mazo</title>
+  <style>
+    body {
+      background-color: #e0f2ff;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #0099ff;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #cce7ff;
+      gap: 20px;
+      padding: 15px;
+    }
+
+    nav button {
+      background-color: #3399ff;
+      border: none;
+      padding: 12px 24px;
+      color: white;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .avatar {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .avatar img {
+      width: 200px;
+      border-radius: 50%;
+      border: 3px solid #3399ff;
+    }
+
+    section {
+      display: none;
+      padding: 20px;
+    }
+
+    .active {
+      display: block;
+    }
+
+    h2 {
+      color: #0066cc;
+    }
+
+    .pregunta {
+      margin-bottom: 15px;
+    }
+
+    .resultado {
+      margin-top: 5px;
+      font-weight: bold;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .card img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🌈 Aula Azul - Escuela Primaria Alfredo del Mazo 🌈</h1>
+  </header>
+
+  <div class="avatar">
+    <img src="avatar.jpeg" alt="avatar Azulín"
+    width="1000"/>
+    <p>¡Hola! Soy Azulín y te guiaré en esta aventura de aprendizaje.</p>
+  </div>
+
+  <nav>
+    
+    <button onclick="mostrar('matematicas')">🧮 Matemáticas</button>
+    <button onclick="mostrar('espanol')">📖 Español</button>
+    <button onclick="mostrar('ciencias')">🔬 Ciencias</button>
+    
+  </nav>
+  
+
+  <!-- Matemáticas -->
+  <section id="matematicas" class="active">
+    <h2>🧮 Matemáticas Divertidas</h2>
+    <img src="Matemáticas.jpeg" alt="Matemáticas"
+    width="300">
+    <div class="card">
+        
+      <div class="pregunta">
+        <label>1. ¿Cuánto es 7 + 5?</label><br>
+        <input type="number" id="mat1">
+        <button onclick="verificar('mat1', 12)">Verificar</button>
+        <div class="resultado" id="resmat1"></div>
+      </div>
+
+      <div class="pregunta">
+        <label>2. ¿Cuánto es 9 x 3?</label><br>
+        <input type="number" id="mat2">
+        <button onclick="verificar('mat2', 27)">Verificar</button>
+        <div class="resultado" id="resmat2"></div>
+      </div>
+
+      <div class="pregunta">
+        <label>3. ¿Cuánto es 100 - 45?</label><br>
+        <input type="number" id="mat3">
+        <button onclick="verificar('mat3', 55)">Verificar</button>
+        <div class="resultado" id="resmat3"></div>
+      </div>
+      <div class="pregunta">
+        <label>4. ¿Cuánto es 100&divide;50?</label><br>
+        <input type="number" id="mat4">
+        <button onclick="verificar('mat4', 2)">Verificar</button>
+        <div class="resultado" id="resmat4"></div>
+      </div>
+      <div class="pregunta">
+        <label>5. ¿Cuánto es 244 + 46</label><br>
+        <input type="number" id="mat5">
+        <button onclick="verificar('mat5', 290)">Verificar</button>
+        <div class="resultado" id="resmat5"></div>
+      </div>
+      <div class="pregunta">
+        <label>6. ¿Cuánto es 500 - 250</label><br>
+        <input type="number" id="mat6">
+        <button onclick="verificar('mat6', 250)">Verificar</button>
+        <div class="resultado" id="resmat6"></div>
+      </div>
+      <div class="pregunta">
+        <label>7. ¿Cuánto es 100 X 35</label><br>
+        <input type="number" id="mat7">
+        <button onclick="verificar('mat7', 3500)">Verificar</button>
+        <div class="resultado" id="resmat7"></div>
+      </div>
+      <div class="pregunta">
+        <label>8. ¿Cuánto es 98 &divide; 2</label><br>
+        <input type="number" id="mat8">
+        <button onclick="verificar('mat8', 49)">Verificar</button>
+        <div class="resultado" id="resmat8"></div>
+      </div>
+      <div class="pregunta">
+        <label>9. ¿Cuánto es 250 &divide; 5</label><br>
+        <input type="number" id="mat9">
+        <button onclick="verificar('mat9', 50)">Verificar</button>
+        <div class="resultado" id="resmat9"></div>
+      </div>
+      <div class="pregunta">
+        <label>10. ¿Cuánto es 56 X 8</label><br>
+        <input type="number" id="mat10">
+        <button onclick="verificar('mat10', 448)">Verificar</button>
+        <div class="resultado" id="resmat10"></div>
+      </div>
+  
+    </div>
+  </section>
+
+  <!-- Español -->
+  <section id="espanol">
+    <h2>📖 Lectura: "La ardilla y el árbol"</h2>
+    <img src="Ardilla.jpeg" alt="Ardilla"
+    width="200">
+    <div class="card">
+      <p>
+        Había una vez una pequeña ardilla que vivía en un bosque grande y verde. Todos los días subía a un árbol alto para buscar nueces.
+        Un día, escuchó a un árbol viejo decir que ya no tenía fuerza. La ardilla, muy amable, llamó a todos sus amigos animales para ayudarlo.
+      </p>
+      <p><strong>Pregunta:</strong> ¿Por qué la ardilla llamó a sus amigos?</p>
+      <input type="text" id="esp1">
+      <button onclick="verificarTexto('esp1', 'para ayudar al árbol')">Verificar</button>
+      <div class="resultado" id="resesp1"></div>
+      <h2>📖 Lectura: "El perro y la luna"</h2>
+    <img src="Perro.jpeg" alt="Perro"
+    width="150">
+    <div class="card">
+      <p>Una noche, el perrito Max salió al jardín. Al mirar al cielo, vio una luna muy brillante.
+—¡Guau! —ladró Max—. ¡Esa pelota es gigante! ¡Quiero jugar con ella!
+
+Max saltó, corrió y ladró, pero la luna no bajaba. Entonces se acostó en el pasto y dijo:
+—Tal vez no puedo jugar con la luna, ¡pero sí puedo disfrutar su luz!
+
+Esa noche, Max durmió feliz, bajo el brillo de su nueva amiga: la luna.</p>
+    </div>
+    <h2>📖 Lectura: "La tortuga y el colibrí"</h2>
+    <img src="tortuga.jpeg" alt="tortuga"
+    width="200">
+    <div class="card">
+      <p>Había una vez una tortuga muy tranquila que vivía cerca de un gran lago. Cada día caminaba despacito hacia el agua para beber y luego regresaba a su cueva para descansar.
+
+Un día, un pequeño colibrí llegó volando rápido. Se detuvo junto a la tortuga y le dijo:
+
+—¡Hola, tortuga! ¿Por qué caminas tan lento? ¡Yo puedo volar muy rápido!
+
+La tortuga sonrió y respondió:
+
+—Cada quien tiene su forma de moverse. Lo importante no es correr, sino llegar con cuidado y disfrutar el camino.
+
+El colibrí se quedó pensando y, al ver cómo la tortuga disfrutaba de cada flor y cada piedra del camino, entendió que tenía razón.
+
+Desde ese día, el colibrí volaba más despacio para acompañar a su nueva amiga y así aprendieron a disfrutar el tiempo juntos.
+
+</p>
+
+    <div class="card">
+      <p><strong>Actividad:</strong> Escribe una palabra con "ll".</p>
+      <input type="text" id="esp2">
+      <button onclick="verificarTextoContiene('esp2', 'll')">Verificar</button>
+      <div class="resultado" id="resesp2"></div>
+    </div>
+    <div class="card">
+      <p><strong>Actividad:</strong> Escribe una palabra con "A".</p>
+      <input type="text" id="esp3">
+      <button onclick="verificarTextoContiene('esp3', 'A')">Verificar</button>
+      <div class="resultado" id="resesp3"></div>
+    </div>
+  </section>
+
+  <!-- Ciencias -->
+  <section id="ciencias">
+    <h2>🔬 Experimentos para niños</h2>
+
+    <div class="card">
+      <h3>🌋 Volcán de Bicarbonato</h3>
+      <img src="Volcán de Bicarbonato.jpeg" alt="Volcán de Bicarbonato"
+      width="200">
+      <p><strong>Materiales:</strong> Vinagre, bicarbonato, colorante, recipiente.</p>
+      <p><strong>Pregunta:</strong> ¿Qué gas se produce en la reacción?</p>
+      <input type="text" id="cie1">
+      <button onclick="verificarTexto('cie1', 'dioxido de carbono')">Verificar</button>
+      <div class="resultado" id="rescie1"></div>
+    </div>
+
+    <div class="card">
+      <h3>💧¿Flota o se hunde?</h3>
+      <img src="Objetos flotando.jpeg" alt="Objetos flotando"
+      width="200">
+      <p><strong>Actividad:</strong> Escribe un objeto que flote en el agua.</p>
+      <input type="text" id="cie2">
+      <button onclick="verificarTextoContiene('cie2', 'pelota')">Verificar</button>
+      <div class="resultado" id="rescie2"></div>
+    </div>
+  </section>
+  
+      
+      
+
+  <!-- Scripts -->
+  <script>
+    function mostrar(id) {
+      document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+    }
+
+    function verificar(inputId, respuestaCorrecta) {
+      const valor = parseInt(document.getElementById(inputId).value);
+      const resultado = document.getElementById("res" + inputId);
+      if (valor === respuestaCorrecta) {
+        resultado.textContent = "✅ ¡Correcto!";
+        resultado.style.color = "green";
+      } else {
+        resultado.textContent = "❌ Intenta de nuevo.";
+        resultado.style.color = "red";
+      }
+    }
+
+    function verificarTexto(inputId, respuestaCorrecta) {
+      const valor = document.getElementById(inputId).value.toLowerCase().trim();
+      const resultado = document.getElementById("res" + inputId);
+      if (valor === respuestaCorrecta.toLowerCase()) {
+        resultado.textContent = "✅ ¡Correcto!";
+        resultado.style.color = "green";
+      } else {
+        resultado.textContent = "❌ Intenta de nuevo.";
+        resultado.style.color = "red";
+      }
+    }
+
+    function verificarTextoContiene(inputId, parteTexto) {
+      const valor = document.getElementById(inputId).value.toLowerCase();
+      const resultado = document.getElementById("res" + inputId);
+      if (valor.includes(parteTexto.toLowerCase())) {
+        resultado.textContent = "✅ ¡Bien hecho!";
+        resultado.style.color = "green";
+      } else {
+        resultado.textContent = "❌ Sigue intentando.";
+        resultado.style.color = "red";
+      }
+    }
+    
+  </script>
+</body>
+</html>
+
